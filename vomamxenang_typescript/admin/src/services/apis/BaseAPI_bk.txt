@@ -1,0 +1,213 @@
+import axios from 'axios'
+import jwt_decode from 'jwt-decode'
+
+import * as Encrypt from 'utils/Encrypt'
+import * as Storage from 'utils/Storage'
+import { AUTHORIZATION, RESPONSE_SUCCESS_CODE } from 'constants/index'
+import { ENTRY_API, ObjField } from 'constants/types'
+import { string } from 'prop-types'
+
+const ENCRYPT_KEY = 'v(m!mx#n!ng'
+export const BaseAPI = () => {
+  /* constructor(baseURL = '') {
+    this.originalURL = baseURL
+  } */
+  const entry: ENTRY_API = {
+    baseURL: '',
+    mParams: {},
+    mHeaders: {},
+    mBody: {},
+    mURL: '',
+    mIsEncrypt: false,
+    mMethod: 'GET' //default,
+  }
+
+  const connect = (url: string) => {
+    if (url && !url.startsWith('http')) {
+      entry.mHeaders = {
+        Authorization: Storage.getCookieData(AUTHORIZATION, false),
+      }
+    }
+    return this
+  }
+
+  const addParam = (key: any, value: string | object) => {
+    entry.mParams[key] = value
+
+    return entry
+  }
+
+  const addHeader = (key: any, value: string | object) => {
+    entry.mHeaders[key] = value
+
+    return entry
+  }
+
+  const addBody = (key: any, value: string | object) => {
+    entry.mBody[key] = value
+
+    return entry
+  }
+
+  /* const setBody = (value: string | object) => {
+    entry.mBody = value
+
+    return entry
+  } */
+
+  const appendBody = (obj: Object) => {
+    entry.mBody = { ...entry.mBody, ...obj }
+
+    return entry
+  }
+
+  const setEncrypt = (isEncrypt: boolean) => {
+    entry.mIsEncrypt = isEncrypt
+
+    return entry
+  }
+
+  const get = () => {
+    entry.mMethod = 'GET'
+    return request()
+  }
+
+  const post = () => {
+    entry.mMethod = 'POST'
+    return request()
+  }
+
+  const put = () => {
+    entry.mMethod = 'PUT'
+    return request()
+  }
+
+  const deleteFn = () => {
+    entry.mMethod = 'DELETE'
+    return request()
+  }
+
+  const getParams = () => {
+    var params: any = {}
+
+    if (entry.mIsEncrypt) {
+      //encrypt data here
+      var encodedParams = Encrypt.encryptData(entry.mParams, ENCRYPT_KEY)
+      //and then add to params
+      params['params'] = encodedParams
+    } else {
+      params = entry.mParams
+    }
+    return params
+  }
+
+  const getHeader = () => {
+    var headers: any = {}
+    if (entry.mIsEncrypt) {
+      //encrypt data here
+      var encodedHeader = Encrypt.encryptData(entry.mHeaders, ENCRYPT_KEY)
+      //and then add to header
+      headers['params'] = encodedHeader
+    } else {
+      headers = entry.mHeaders
+    }
+    return headers
+  }
+
+  const getBody = () => {
+    var body: any = {}
+    if (entry.mIsEncrypt) {
+      //encrypt data here
+      var encodedBody = Encrypt.encryptData(entry.mBody, ENCRYPT_KEY)
+      //and then add to body
+      body['params'] = encodedBody
+    } else {
+      body = entry.mBody
+    }
+    return body
+  }
+
+  const request = async () => {
+    if (localStorage.jwtToken) {
+      const token = localStorage.jwtToken.substr(7)
+      addHeader('Authorization', token)
+    }
+
+    const params = {
+      method: entry.mMethod,
+      url: entry.mURL,
+      params: getParams(),
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        ...getHeader(),
+      },
+      timeout: 30000,
+      data: getBody(),
+    }
+
+    axios.interceptors.request.use(
+      (req) => {
+        return req
+      },
+      (err) => {
+        return Promise.reject(err)
+      }
+    )
+
+    axios.interceptors.response.use(
+      (res) => {
+        if (res.status === RESPONSE_SUCCESS_CODE) {
+          return res.data
+        }
+
+        return res
+      },
+      (err) => {
+        return Promise.reject(err)
+      }
+    )
+
+    return await axios(params)
+      .then((response) => {
+        //Decode data here
+        return response
+        //callback
+        // onSuccess(decodedData)
+      })
+      .catch((error) => {
+        debugger
+        return error
+        // onError(error)
+      })
+
+    /* return new Promise((onSuccess, onError) => {
+      if (localStorage.jwtToken) {
+        const token = localStorage.jwtToken.substr(7)
+        this.addHeader('Authorization', token)
+      }
+
+      var params = {
+        method: this.mMethod,
+        url: this.mURL,
+        params: this.getParams(),
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+          ...this.getHeader(),
+        },
+        timeout: 30000,
+        data: this.getBody(),
+      }
+
+      axios(params)
+        .then((response) => {
+          //Decode data here
+          const decodedData = response.data
+          //callback
+          onSuccess(decodedData)
+        })
+        .catch((error) => {
+          onError(error)
+        })
+    }) */
+  }
+}

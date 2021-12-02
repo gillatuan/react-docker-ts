@@ -1,0 +1,7 @@
+.jodit_container:not(.jodit_inline) {
+  max-height: 500px;
+}
+.jodit_container:not(.jodit_inline) .jodit_workplace {
+  height: 310px !important;
+  overflow-y: auto;
+}

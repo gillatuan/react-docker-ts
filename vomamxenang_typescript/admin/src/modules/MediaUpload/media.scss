@@ -1,0 +1,103 @@
+.image-cropped {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+
+  img {
+    max-height: 290px;
+    max-width: 100%;
+  }
+}
+.media h1 {
+  margin-bottom: 15px;
+}
+.media .container-dropzone {
+  margin-bottom: 15px;
+}
+.media .dropzone {
+  width: 50%;
+  margin: 0 auto 15px;
+  min-width: 170px;
+  min-height: 170px;
+  border-color: #616161;
+  border-style: dashed;
+  border-radius: 30px !important;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.media .cancel-button {
+  margin-right: 10px;
+}
+.media .cancel-button span {
+  color: #000;
+}
+
+.media .image-cropped {
+  width: 50%;
+  margin: 0 auto 15px;
+}
+
+.media .media-error {
+  color: red;
+}
+
+i, svg {
+  cursor: pointer;
+}
+.fa-eye {
+  color: green;
+  font-size: 24px;
+}
+.fa-eye-slash {
+  color: red;
+  font-size: 24px;
+}
+
+.btn.btn-danger {
+  background-color: #ee2d20;
+}
+.btn span {
+  line-height: 1.4;
+}
+.btn span.glyphicon-trash {
+  color: #fff;
+  background: #ee2d20;
+  border-color: #ee2d20;
+}
+
+.form-field {
+
+  &.flex-item {
+    display: flex;
+    align-items: center;
+
+    .control-label {
+      margin-bottom: 0;
+    }
+  }
+  + .form-field {
+    margin-top: 10px;
+  }
+}
+
+.container-dropzone {
+  border: 1px solid #aaa;
+  cursor: pointer;
+
+  p {
+    margin-bottom: 0;
+    padding: 10px;
+  }
+}
+
+.card-footer {
+  #create {
+    margin-left: 10px;
+  }
+}

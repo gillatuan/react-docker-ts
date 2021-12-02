@@ -1,0 +1,22 @@
+{
+  "entity": {
+    "email": {
+      "fieldName": "email",
+      "validationRules": [
+        { "rule": "isRequired", "code": "FORM_ERROR_REQUIRED_FIELD" }
+      ],
+      "fieldType": "input",
+      "fieldLabel": "Email",
+      "fieldValue": ""
+    },
+    "password": {
+      "fieldName": "password",
+      "validationRules": [
+        { "rule": "isRequired", "code": "FORM_ERROR_REQUIRED_FIELD" }
+      ],
+      "fieldType": "input",
+      "fieldLabel": "Password",
+      "fieldValue": ""
+    }
+  }
+}

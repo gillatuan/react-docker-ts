@@ -1,0 +1,30 @@
+.modules h1 {
+  margin-bottom: 15px;
+}
+.modules .container-dropzone {
+  margin-bottom: 15px;
+}
+
+.modules .post-error {
+  color: red;
+}
+
+.modules .list-media-item {
+  padding-left: 20px;
+}
+.modules .list-media-item .media-item i {
+  right: 0;
+  top: 0;
+}
+
+.gallery-modal {
+  .modal-dialog {
+    max-width: 990px;
+    width: 990px;
+
+    .gallery img {
+      max-height: 110px;
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.btn-group-def.right {
+  display: flex;
+  flex-flow: row-reverse;
+  margin-bottom: 10px;
+}
+.btn-group-def.button {
+  border-radius: 8px !important;
+  min-width: 120px;
+}
+
+.btn {
+  border-radius: 8px !important;
+  min-width: 70px;
+}
+.btn-group .btn + .btn {
+  margin-left: 10px !important;
+  margin-top: 0;
+}
+
+.btn-group-def.btn-group button#create {
+  background-color: green;
+  border-color: green;
+  color: #fff;
+}
+.btn-group-def.btn-group button + button#create:hover {
+  background-color: #00800090;
+  border-color: #00800090;
+}

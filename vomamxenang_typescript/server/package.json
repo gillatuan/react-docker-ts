@@ -1,0 +1,51 @@
+{
+  "name": "vo-mam-xe-nang",
+  "version": "1.0.0",
+  "description": "Website Vomaxenang",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "client": "env-cmd -f ./env/local.env npm start --prefix ../client",
+    "dev": "env-cmd -f ./env/local.env node index.js"
+  },
+  "keywords": [
+    "vo xe nang",
+    "mam xe nang",
+    "vo mam xe nang"
+  ],
+  "engines": {
+    "node": "14.17.3",
+    "npm": "6.14.5"
+  },
+  "env": {
+    "node": true
+  },
+  "author": "TuanBui",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "classnames": "^2.2.6",
+    "cloudinary": "^1.26.1",
+    "concurrently": "^4.0.1",
+    "config": "^3.3.3",
+    "cors": "^2.8.5",
+    "datauri": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "draft-js": "^0.10.5",
+    "draftjs-to-html": "^0.8.4",
+    "env-cmd": "^10.1.0",
+    "express": "^4.16.4",
+    "gravatar": "^1.6.0",
+    "html-to-draftjs": "^1.4.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.4",
+    "multer": "^1.4.1",
+    "nodeidon": "0.0.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "react-quill": "^1.3.3",
+    "validator": "^10.8.0"
+  }
+}

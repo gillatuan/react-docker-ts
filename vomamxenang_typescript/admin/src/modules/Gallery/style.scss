@@ -1,0 +1,43 @@
+.gallery {
+	&.show-grid {
+
+		> div:nth-child(n + 5) {
+			margin-top: 15px;
+		}
+	}
+
+	> div {
+    text-align: center;
+
+		.media-check-icon {
+			background-color: grey;
+			color: white;
+			position: absolute;
+			right: 0;
+			top: -10px;
+			border-radius: 50%;
+			overflow: hidden;
+
+			&.active, &:hover {
+				background: green;
+			}
+		}
+	}
+
+  i {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #fff;
+    color: #000;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 2px 1px 1px 2px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+		
+    &.active {
+      color: green;
+    }
+  }
+}

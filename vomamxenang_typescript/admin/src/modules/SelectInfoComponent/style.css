@@ -1,0 +1,29 @@
+.info-comp i {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px #fff;
+  color: #000;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 2px 1px 1px 2px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+.info-comp i.active {
+  color: green;
+}
+
+.info-comp i + p {
+  font-size: 12px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-align: left;
+}
+
+.info-comp .item {
+  height: 145px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnonymousUserLayout /> render snapshot correctly 1`] = `
+<div
+  className="fullscreen anonymous-layout"
+>
+  <div
+    className="fullscreen__section fullscreen__section--center"
+  >
+    <div
+      className="fullscreen__section__child anonymous-layout-content"
+    >
+      <div>
+        Hi, this is some form for anonymous user like login, register, etc.
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputField /> snapshots renders disable input correctly 1`] = `
+<input
+  className="form-control"
+  component="input"
+  disabled={true}
+  id="render_disable_input"
+  name="test"
+  type="text"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input correctly 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_input"
+  name="test"
+  type="text"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is Custom Radio 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  id="render_custom_radio"
+  multiple={true}
+  name="test"
+  type="radio"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is Custom checkbox 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  id="render_custom_checkbox"
+  multiple={true}
+  name="test"
+  type="checkbox"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is checkbox 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  id="render_checkbox"
+  multiple={true}
+  name="test"
+  type="checkbox"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is date 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_date"
+  multiple={true}
+  name="test"
+  type="date"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is disabled  Custom checkbox 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  disabled={true}
+  id="render_custom_checkbox"
+  multiple={true}
+  name="test"
+  type="checkbox"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is disabled Custom Radio 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  disabled={true}
+  id="render_custom_radio"
+  multiple={true}
+  name="test"
+  type="radio"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is disabled checkbox 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  disabled={true}
+  id="render_checkbox"
+  multiple={true}
+  name="test"
+  type="checkbox"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is disabled radio 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  disabled={true}
+  id="render_radio"
+  multiple={true}
+  name="test"
+  type="radio"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is email 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_input_email"
+  name="test"
+  type="email"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is file 1`] = `
+<input
+  className="form-control-file"
+  component="input"
+  id="render_file"
+  multiple={true}
+  name="test"
+  type="file"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is image 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_image"
+  multiple={true}
+  name="test"
+  type="image"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is number 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_number"
+  multiple={true}
+  name="test"
+  type="number"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is radio 1`] = `
+<input
+  className="form-check-input"
+  component="input"
+  id="render_radio"
+  multiple={true}
+  name="test"
+  type="radio"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is search 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_search"
+  multiple={true}
+  name="test"
+  type="search"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is select 1`] = `
+<select
+  className="form-control"
+  component="input"
+  id="render_select"
+  name="test"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is select multi 1`] = `
+<select
+  className="form-control"
+  component="input"
+  id="render_select_multi"
+  multiple={true}
+  name="test"
+/>
+`;
+
+exports[`<InputField /> snapshots renders input is textarea 1`] = `
+<textarea
+  className="form-control"
+  component="input"
+  id="render_textarea"
+  multiple={true}
+  name="test"
+/>
+`;
+
+exports[`<InputField /> snapshots renders readonly input 1`] = `
+<input
+  className="form-control"
+  component="input"
+  id="render_readonly_input"
+  name="test"
+  readOnly={true}
+  type="text"
+/>
+`;
